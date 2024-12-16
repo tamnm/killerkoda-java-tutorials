@@ -35,6 +35,9 @@
             "text": "finish.md"
         }
     },
+    "backend": {
+        "imageid": "ubuntu"
+    },
     "environment": {
         "uilayout": "terminal",
         "uimessage1": "Welcome to the Hello World Java tutorial!"
