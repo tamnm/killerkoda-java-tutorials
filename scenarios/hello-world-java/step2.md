@@ -1,11 +1,38 @@
-# Step 2: Create Maven Project
+# Step 2: Create a Maven Project
 
-Use the Maven Archetype plugin to generate a new Java project:
+Run the following command to generate a Maven project:
 
 ```bash
-mvn archetype:generate -DgroupId=com.example -DartifactId=helloworld -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+mvn archetype:generate \
+  -DarchetypeGroupId=org.apache.maven.archetypes \
+  -DarchetypeArtifactId=maven-archetype-quickstart \
+  -DarchetypeVersion=1.4 \
+  -DgroupId=com.example \
+  -DartifactId=helloworld \
+  -DinteractiveMode=false
 ```
 
-Navigate to the project directory:
-
+```markdown
 cd helloworld
+
+Verify the generated project structure:
+
+```bash
+tree
+```
+You should see a folder structure similar to:
+```bash
+helloworld/
+├── pom.xml
+└── src
+    ├── main
+    │   └── java
+    │       └── com
+    │           └── example
+    │               └── App.java
+    └── test
+        └── java
+            └── com
+                └── example
+                    └── AppTest.java
+```

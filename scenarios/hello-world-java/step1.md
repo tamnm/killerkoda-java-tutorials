@@ -1,13 +1,13 @@
-# Step 1: Set Up Environment
+# Step 1: Verify Java and Maven
 
-Ensure that Java and Maven are installed in your environment.
+Ensure OpenJDK 17 and Maven are installed:
 
 ```bash
 java -version
 mvn -version
 ```
 
-If they are not installed, you can install them using the following commands:
+Expected output:
 
-sudo apt update
-sudo apt install openjdk-11-jdk maven -y
+Java should report version `17`.
+Maven should display its version and Java `17` compatibility.

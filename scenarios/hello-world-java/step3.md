@@ -1,7 +1,7 @@
-# Step 3: Build and Run
+# Step 3: Build and Run the Application
 
-Compile the project using Maven:
-
+### Build the Project
+Run Maven to compile and package the project:
 ```bash
 mvn clean package
 ```
