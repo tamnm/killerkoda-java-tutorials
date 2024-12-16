@@ -1,32 +1,28 @@
 #!/bin/bash
 
-# Install Java and Maven if not already installed
-echo "Setting up the environment..."
-
-# Update package index
-sudo apt-get update -y
-
-# Install Java (default JDK)
-if ! command -v java &> /dev/null; then
-  echo "Installing Java..."
-  sudo apt-get install -y default-jdk
-else
-  echo "Java is already installed."
+# Install OpenJDK 17 if not already installed
+if ! java -version 2>&1 | grep "17"; then
+  echo "Installing OpenJDK 17..."
+  sudo apt update -qq
+  sudo apt install -y openjdk-17-jdk
 fi
 
-# Install Maven
-if ! command -v mvn &> /dev/null; then
+# Set JAVA_HOME and update alternatives
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+sudo update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java
+
+# Install Maven if not already installed
+if ! mvn -version &> /dev/null; then
   echo "Installing Maven..."
-  sudo apt-get install -y maven
-else
-  echo "Maven is already installed."
+  sudo apt install -y maven
 fi
 
-# Verify installations
-echo "Java Version:"
-java -version
+# Install tree if not already installed
+if ! command -v tree &> /dev/null; then
+  echo "Installing tree..."
+  sudo apt install -y tree
+fi
 
-echo "Maven Version:"
-mvn -version
-
-echo "Environment setup is complete!"
+# Signal that the environment setup is complete
+touch /tmp/env-setup-complete

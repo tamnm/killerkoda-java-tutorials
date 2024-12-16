@@ -1,7 +1,3 @@
-Here’s the updated **Step 2** content based on using the Maven command you provided to initialize the project with a "Hello, World!" example:
-
----
-
 # Step 2: Creating a Java Project Using Maven Archetype
 
 In this step, you will use Maven to generate a new Java project that includes a "Hello, World!" example.
@@ -38,31 +34,13 @@ In this step, you will use Maven to generate a new Java project that includes a 
    ├── pom.xml
    ```
 
-## Exploring the Generated Code
-
-2. Navigate to the newly created directory:
+2. View the generated `App.java` file to ensure it contains the "Hello, World!" code:
 
    ```bash
-   cd helloworld
+   cat helloworld/src/main/java/com/example/App.java
    ```{{exec}}
 
-3. View the contents of the `App.java` file to examine the "Hello, World!" code:
-
-   ```bash
-   cat src/main/java/com/example/App.java
-   ```{{exec}}
-
-   The file should contain the following code:
-
-   ```java
-   package com.example;
-
-   public class App {
-       public static void main(String[] args) {
-           System.out.println("Hello, World!");
-       }
-   }
-   ```
+   The file should contain the main method for printing "Hello, World!".
 
 ## Next Step
 
