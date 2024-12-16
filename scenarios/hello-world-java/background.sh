@@ -18,5 +18,11 @@ if ! mvn -version &> /dev/null; then
   sudo apt install -y maven
 fi
 
+# Install tree if not already installed
+if ! command -v tree &> /dev/null; then
+  echo "Installing tree..."
+  sudo apt install -y tree
+fi
+
 # Signal that the environment setup is complete
 touch /tmp/env-setup-complete

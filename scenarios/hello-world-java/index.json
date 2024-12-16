@@ -1,45 +1,39 @@
 {
-    "title": "Hello World Java with Maven Archetype",
-    "description": "Learn how to create a simple Java project using Maven Archetype.",
+    "title": "Getting Started with Java: Hello World Application",
+    "description": "Learn the basics of Java programming by writing, compiling, and running a simple 'Hello World' application. This tutorial covers setting up the environment, understanding the code structure, and executing your first Java program.",
     "difficulty": "beginner",
-    "time": "10 minutes",
+    "time": "15 minutes",
     "details": {
         "steps": [
             {
-                "title": "Introduction",
-                "text": "intro.md"
+                "title": "Introduction to Java and Development Environment",
+                "text": "step1/text.md",
+                "verify": "step1/verify.sh"
             },
             {
-                "title": "Set Up Environment",
-                "text": "step1.md"
+                "title": "Writing Your First Java Program",
+                "text": "step2/text.md",
+                "verify": "step2/verify.sh"
             },
             {
-                "title": "Create Maven Project",
-                "text": "step2.md"
-            },
-            {
-                "title": "Build and Run",
-                "text": "step3.md"
-            },
-            {
-                "title": "Conclusion",
-                "text": "finish.md"
+                "title": "Compiling and Running the Java Application",
+                "text": "step3/text.md",
+                "verify": "step3/verify.sh"
             }
         ],
         "intro": {
-            "text": "intro.md",
-            "courseData": "background.sh",
-            "code": "foreground.sh"
+            "text": "intro/text.md",
+            "code": "intro/foreground.sh"
         },
         "finish": {
             "text": "finish.md"
         }
     },
+    "environment": {
+        "uilayout": "editor-terminal",
+        "instructions": "This environment uses Ubuntu. Java will be installed during setup using provided scripts."
+    },
     "backend": {
         "imageid": "ubuntu"
-    },
-    "environment": {
-        "uilayout": "terminal",
-        "uimessage1": "Welcome to the Hello World Java tutorial!"
     }
 }
