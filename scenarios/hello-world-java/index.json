@@ -8,7 +8,9 @@
             {
                 "title": "Introduction to Java and Development Environment",
                 "text": "step1/text.md",
-                "verify": "step1/verify.sh"
+                "verify": "step1/verify.sh",
+                "foreground": "step1/foreground.sh",
+                "background": "step1/background.sh"
             },
             {
                 "title": "Writing Your First Java Program",
